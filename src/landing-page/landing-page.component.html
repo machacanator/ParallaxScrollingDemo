@@ -1,6 +1,6 @@
-<div class="page-container">
+<div #pageContainer class="page-container">
     <div>landing-page works!</div>
-    <span class="scroll-btn">
+    <span [ngClass]="{'scroll-btn': true, 'scroll-btn--desaparecer': scrollCounter > 0 }">
         <span class="mouse">
             <span>
             </span>
