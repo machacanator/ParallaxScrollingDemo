@@ -8,6 +8,34 @@
     color: white
 }
 
+.arrows {
+	width: 60px;
+	height: 74px;
+}
+
+.arrows path {
+	stroke: white;
+	fill: transparent;
+	stroke-width: 3px;	
+	animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+	-webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+	-webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 {	
+	animation-delay:0s;
+	-webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
 .scroll-btn {
 	width: fit-content;
 	opacity: 1;
@@ -15,7 +43,7 @@
 	position: absolute;
 	transition: opacity 1.5s ease-in-out;
 	left: calc(50vw - 17px);
-	top: calc(100vh - 125.5px);
+	top: calc(100vh - 190px);
 	text-align: center;
 
 	&--desaparecer {
@@ -37,14 +65,14 @@
 .scroll-btn .mouse {
 	position: relative;
 	display: block;
-	width: calc(52.5px);
-	height: calc(82.5px);
+	width: 52.5px;
+	height: 82.5px;
 	margin: 0 auto 20px;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 	border: 3px solid white;
-	border-radius: calc(34.5px);
+	border-radius: 34.5px;
 }
 
 .scroll-btn .mouse > * {
@@ -127,4 +155,20 @@
 	opacity: 0;
 	top: 29%;
 	}
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
 }
